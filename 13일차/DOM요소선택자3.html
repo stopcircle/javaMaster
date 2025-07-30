@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function change(){
+            //1. 선택하기 querySelector
+            //주의사항: 한 개만 선택됨
+            //2. 스타일 변경하기
+
+            const item1 = document.querySelector("#item1"); //idrk item인 것 선택
+            console.log(item1);
+
+            item1.style.backgroundColor="blue";
+            
+            const item2 = document.querySelector(".item2");
+            item2.style.backgroundColor="yellow";
+        }
+        function unchange(){
+
+            const item1 = document.querySelector("#item1"); //idrk item인 것 선택
+            console.log(item1);
+
+            item1.style.backgroundColor="";
+
+            const item2 = document.querySelector(".item2");
+            item2.style.backgroundColor="";
+        }
+    </script>
+</head>
+<body>
+    <h2>querySelector이용하여 요소 선택하기</h2>
+    <p>한 개를 반환한다</p>
+
+    <div id="item1">item1</div>
+    <div class="item2">item2</div>
+
+    <button onclick="change()">스타일적용</button>
+    <button onclick="unchange()">스타일취소</button>
+</body>
+</html>

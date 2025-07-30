@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function validLogin(){
+            //폼 객체 접근하기
+            const form = document.frm;
+            const userId= form.userId;
+            const userPw= form.userPw;
+
+            if(userId.value === ""){
+                alert("id 입력하세요");
+                userId.focus();
+            }else if(userPw.value ===""){
+                alert("pw 입력하세요");
+                userPw.focus();
+            }else{
+                alert("로그인 성공");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>로그인 유효성 검증</h2>
+    <form name="frm" action="" method="get">
+        <input type="text" name="userId">
+        <input type="password" name="userPw">
+        <button type="button" onclick="validLogin()">로그인</button>
+    </form>
+</body>
+</html>

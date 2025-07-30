@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .wrap {
+            width: 400px;
+            border: 1px solid black;
+            margin: 100px auto;
+        }
+
+        .tab_menu {
+            display: flex;
+        }
+
+        .tab_menu>div {
+            border: 1px solid black;
+            width: 50%;
+        }
+
+        .member {
+            border: 1px solid black;
+            height: 200px;
+        }
+
+        .nomember {
+            border: 1px solid black;
+            height: 200px;
+        }
+
+        .member, .nomember{
+            display: none;
+        }
+    </style>
+    <script>
+        function showmember(){
+            const member = document.querySelector(".member");
+            const nomember = document.querySelector(".nomember");
+
+            member.style.display="block";
+            nomember.style.display="none";
+        }
+        function shownomember(){
+            const member = document.querySelector(".member");
+            const nomember = document.querySelector(".nomember");
+
+            member.style.display="none";
+            nomember.style.display="block";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- 탭메뉴 -->
+        <div class="tab_menu">
+            <div onclick="showmember()">회원</div>
+            <div onclick="shownomember()">비회원</div>
+        </div>
+
+        <!-- 회원로그인 -->
+        <div class="member" style="display: block;">
+            회원 화면
+        </div>
+
+
+        <!-- 비회원로그인 -->
+        <div class="nomember" style="display: none;">
+            비회원
+        </div>
+    </div>
+
+
+</body>
+
+</html>
