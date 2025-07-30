@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //함수: 코드덩어리에 이름을 붙여놓은것
+        //함수호출을 통해서 코드가 실행됨
+
+        //기능:평균 구하기
+        //입력(매개변수):정수형 배열
+        //반환:배열의 평균 값
+        
+        function avg(a){
+            let sum = 0;
+            for(let i=0; i<a.length; i++){
+                sum = sum + a[i];
+            }
+            let avg = sum / a.length;
+            return avg;
+        }
+        let scores=[90,80,70,60];
+        let result = avg(scores);
+        console.log(result);
+
+        //기능: 로또 정보를 반환하는 함수
+        //입력: x
+        //반환: 특정회차 반환
+
+        function func1(){
+            return 5;
+        }
+        function func2(){
+            let a=10, b=8
+            return a, b;
+        }
+        function func3(){
+            let a=10, b=3
+            let arr=[a,b];
+            return arr;
+        }
+
+        let result1 = func1();
+        let result2 = func2();
+        let result3 = func3();
+        console.log(result1);
+        console.log(result2);
+        console.log(result3);
+    </script>
+</body>
+</html>

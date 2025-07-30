@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function lotto(num) {
+            let arr = [
+                [3, 4, 6, 8, 32, 42, 31],    //1회차
+                [7, 9, 11, 21, 30, 35, 29],  //2회차
+                [3, 7, 15, 16, 19, 43, 21],  //3회차
+                [5, 6, 11, 27, 43, 44, 17],  //4회차
+                [3, 16, 18, 24, 40, 44, 21], //5회차
+                [6, 12, 18, 37, 40, 41, 3],  //6회차
+                [8, 10, 14, 20, 33, 41, 28], //7회차
+                [1, 13, 21, 25, 28, 31, 22]  //8회차 
+            ];
+
+            let result = "";
+
+            for (let i=0; i<6; i++){
+                result += `${arr[num - 1][i]}, `;
+            }
+            result += "보너스번호 " + arr[num - 1][6];
+
+            return result;
+        }
+
+        let num = parseInt(prompt("원하는 로또 회차를 입력(1~8)"));
+        let result = lotto(num);
+
+        document.write(`${num}회차의 당첨번호는 ${result}입니다.`);
+    </script>
+
+</body>
+
+</html>

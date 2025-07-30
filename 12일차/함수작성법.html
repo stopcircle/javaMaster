@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //함수 선언식: function 함수이름(){}
+        //함수 선언식으로 작성한 함수는 호이스팅됨
+        //함수 호출보다 아래에 있어도 정상적으로 작동함
+        //호이스팅 => 함수선언식으로 만든 함수는 먼저 해석함
+        
+        //1 ~ 10까지 합
+
+        function hap10() {
+            let sum = 0;
+            for (let i = 1; i <= 10; i++) {
+                sum += i;
+            }
+            return sum;
+        }
+
+        let result = hap10();
+        alert(result);
+    </script>
+</body>
+
+</html>

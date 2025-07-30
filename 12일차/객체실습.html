@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let me = {
+            name: "정지원",
+            gender: "남자",
+            age: "25",
+            residence: "인천",
+            hobby: "영화보기",
+
+            meInfo: function (type) {
+                return this[type];
+            }
+        };
+
+        let Info = prompt("원하는 정보의 번호 입력:\n 이름(name), 성별(gender), 나이(age), 사는지역(residence), 취미(hobby)")
+        let result = me.meInfo(Info);
+        if (result != null) {
+            alert("답변: " + result);
+        } else {
+            alert("잘못 입력됨‧‧‧ name, gender, age, residence, hobby 중 하나로 입력하세요.");
+        }
+    </script>
+</body>
+
+</html>

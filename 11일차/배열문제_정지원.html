@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        {//1.문제: 아래 과일 배열에서 첫 번째와 세 번째 요소를 출력하세요.
+            const 과일 = ['apple', 'banana', 'cherry'];
+            console.log("1. 문제: 아래 과일 배열에서 첫 번째와 세 번째 요소를 출력하세요.")
+
+            console.log(과일[0]);
+            console.log(과일[2]);
+        }
+
+
+        {//2.문제: 아래 배열 컬러 길이를 출력하세요.
+            console.log("2. 문제: 아래 배열 컬러 길이를 출력하세요.");
+            const 컬러 = ['red', 'blue', 'green', 'yellow'];
+
+            console.log("배열 컬러의 길이:" + 컬러.length);
+        }
+
+        {//3.문제: 아래 배열 점수에 있는 모든 숫자의 합을 계산하세요.
+            console.log("3. 문제: 아래 배열 점수에 있는 모든 숫자의 합을 계산하세요.");
+            const 점수 = [10, 20, 30, 40];
+
+            let sum = 0;
+            for (let i = 0; i < 4; i++) {
+                sum += 점수[i];
+            }
+            console.log("합계: " + sum);
+        }
+
+
+        {//4.문제: 아래 이름 배열의 각 요소를 순서대로 출력하세요.
+            console.log("4.문제: 아래 이름 배열의 각 요소를 순서대로 출력하세요.");            
+            const 이름 = ['영숙', '순자', '영자', '옥순', '현숙'];
+
+            for (let i = 0; i < 5; i++) {
+                console.log("이름: " + 이름[i]);
+            }
+        }
+
+
+        {//5.문제: 아래 numbers 배열에서 숫자 7이 있는지 확인하고, 있으면 true , 아니면 false를 출력하세요.
+            console.log("5. 문제: 아래 numbers 배열에서 숫자 7이 있는지 확인하고, 있으면 true , 아니면 false를 출력하세요.");
+            const numbers = [2, 4, 6, 8, 10];
+
+            let result = false;
+            for (let i = 0; i < 5; i++) {
+                if (numbers[i] == 7) {
+                    result = true;
+                }
+            }
+            console.log(result);
+        }
+
+
+        {//6.문제: 아래 numbers 배열에서  가장 큰 수 를 출력하시오
+            console.log("6. 문제: 아래 numbers 배열에서  가장 큰 수를 출력하시오");
+            const numbers = [12, 41, 6, 18, 10];
+
+            let max = 0;
+            max = numbers[0];
+            for (let i = 1; i < 5; i++) {
+                if (max < numbers[i]) {
+                    max = numbers[i];
+                };
+            };
+            console.log("최대값: " + max);
+        }
+
+
+        {//7.문제: 아래  kors 배열에서  총점과 평균을 출력하시오
+            console.log("7. 문제: 아래  kors 배열에서  총점과 평균을 출력하시오");
+            const kors = [90, 80, 70, 99, 100];
+
+            let sum = 0, avg = 0;
+
+            for (let i = 0; i < 5; i++) {
+                sum += kors[i];
+            }
+            avg = sum / kors.length;
+
+            console.log("총점: " + sum);
+            console.log("평균: " + avg);
+
+        }
+
+        {//8.문제: 아래  kors 배열에서   평균보다 높은 점수는 몇개인가 ?
+            console.log("8. 문제: 아래  kors 배열에서   평균보다 높은 점수는 몇개인가 ?");
+            const kors = [90, 80, 70, 99, 100];
+
+            let sum = 0, avg = 0, count = 0;
+
+            for (let i = 0; i < 5; i++) {
+                sum += kors[i];
+            }
+            avg = sum / kors.length;
+
+            for (let i = 0; i < 5; i++) {
+                if (avg < kors[i]) {
+                    count += 1;
+                }
+            }
+            console.log("평균보다 높은 점수 개수: " + count);
+
+        }
+
+        {//9.문제: 아래 prices 배열에서 1200보다 큰 숫자만 골라 새로운 배열에 저장하세요.
+            console.log("9. 문제: 아래 prices 배열에서 1200보다 큰 숫자만 골라 새로운 배열에 저장하세요.");
+            const prices = [1000, 1500, 900, 1800, 2000, 1200];
+
+            let pricesNew = [];
+            for (let i = 0; i < 6; i++) {
+                if (prices[i] > 1200) {
+                    pricesNew.push(prices[i]);
+                }
+            }
+            console.log("새로운 배열:" + pricesNew);
+        }
+
+        {//10.문제: 아래 numbers 배열의 각 요소를 2배로 만든 새로운 배열을 만드세요.
+            console.log("10.  문제: 아래 numbers 배열의 각 요소를 2배로 만든 새로운 배열을 만드세요.");
+            const numbers = [1, 2, 3, 4, 5];
+
+            let numbersNew = [];
+            for (let i = 0; i < 5; i++) {
+                numbersNew.push(numbers[i] * 2);
+            }
+            console.log("2배로 만든 배열: " + numbersNew);
+
+
+        }
+
+        {//11.문제 :아래  fruits 배열에  자두 포함 여부 true, false 출력하시오
+            console.log("11.  문제 :아래  fruits 배열에  자두 포함 여부 true, false 출력하시오"); 
+            let fruits = ["자두", "복숭아", "포도"];
+
+            let result = false;
+            for (let i = 0; i < 3; i++) {
+                if (fruits[i] == "자두") {
+                    result = true;
+                }
+            }
+            console.log(result);
+        }
+
+        {//12.문제 :아래  fruits 배열을  거꾸로 출력하시오
+            console.log("12.문제 :아래  fruits 배열을  거꾸로 출력하시오");
+            let fruits = ["자두", "복숭아", "포도"];
+
+            for (let i = 2; i >= 0; i--) {
+                console.log(fruits[i]);
+            }
+        }
+
+        {//13.문제 :아래  fruits 배열을  거꾸로 순서대로 한 새로운 배열을 만드시오
+            console.log("13.문제 :아래  fruits 배열을  거꾸로 순서대로 한 새로운 배열을 만드시오");  
+            let fruits = ["자두", "복숭아", "포도"];
+
+            let fruitsNew = [];
+            for (let i = 2; i >= 0; i--) {
+                fruitsNew.push(fruits[i]);
+            }
+            console.log("거꾸로 새로운 배열 출력: " + fruitsNew);
+        }
+
+    </script>
+</body>
+
+</html>

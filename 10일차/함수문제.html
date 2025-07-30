@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <script>
+        {//1번 (홀수인지판단하는 함수 만들기)
+            function odd_number(num) {
+                let result;
+                if (num % 2 != 0) {
+                    result = true;
+                } else {
+                    result = false;
+                }
+                return result;
+            }
+            num = parseInt(prompt("수를 입력하세요"));
+            alert(odd_number(result));
+        }
+
+
+
+
+        {//2번 (성인판단하는 함수 만들기)
+            function adult(age) {
+                let result;
+                if (age >= 20) {
+                    result = true;
+                } else {
+                    result = false;
+                }
+                return result
+            }
+            age = parseInt(prompt("나이를 입력하세요 ex) 20"));
+            if(adult(age) == 1){
+                alert("성인입니다");
+            }else{
+                alert("미성년자 입니다");
+            }
+        }
+
+
+        {//3번 (구구단을 출력하는 함수 만들기)
+            function gugudan(dan) {
+                let result = '';
+                for (let i = 1; i <= 9; i++) {
+                    result += dan + " * " + i + " = " + (dan * i) + "\n";
+                }
+                return result;
+            }
+
+            let dan = parseInt(prompt("원하는 단 수를 입력하세요"));
+            alert(gugudan(dan));
+        }
+
+
+        {//4번 (사각형의 넓이를 구하는 함수 만들기)
+            function rectangle(width, height) {
+                let result;
+                result = width * height;
+                return result;
+            }
+            
+            width = parseInt(prompt("가로 길이를 입력하세요"));
+            height = parseInt(prompt("세로 길이를 입력하세요"));
+            alert("사각형의 넓이는 " + rectangle(width, height));
+        }
+
+
+
+        {//5번 (두 수를 매개변수로 받아서  합을 구하는 함수 만들기)
+            function hap(num1, num2) {
+                let result;
+                result = num1 + num2;
+
+                return result;
+            }
+            num1 = parseInt(prompt("원하는 수를 입력하세요"));
+            num2 = parseInt(prompt("원하는 수를 입력하세요"));
+            alert(hap(num1, num2));
+        }
+
+
+        {//6번 (두 수를 매개변수로 받아서  나머지를 구하는 함수 만들기)
+            function remainder(num1, num2) {
+                let result;
+                result = num1 % num2;
+
+                return result;
+            }
+            num1 = parseInt(prompt("원하는 수를 입력하세요"));
+            num2 = parseInt(prompt("원하는 수를 입력하세요"));
+            alert(remainder(num1, num2));
+        }
+
+
+
+        {//7번 (입력된 수만큼 별찍기)
+            function star(num) {
+                let result='';
+                for (let i = 1; i <= num; i++) {
+                    result += '*'
+                }
+                return result;
+            }
+            num = parseInt(prompt("원하는 개수를 입력하세요"));
+            alert(star(num));
+        }
+    </script>
+</body>
+
+</html>

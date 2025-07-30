@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //join매서드
+        //배열 요소 하나의 문자열로 반환함
+
+        let names=["이대훈","김인국","박성욱"];
+        let str='';
+
+        for(let i=0; i<names.length; i++){
+            str = str + names[i];
+        }
+
+        console.log(str);
+
+        let result1=names.join();
+        let result2=names.join("*");
+
+        console.log(result1);
+        console.log(result2);
+    </script>
+</body>
+</html>

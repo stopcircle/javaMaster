@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //자바스크립트가 제공하는 내장객체 
+        //Math => 수학관련 기능 제공
+        //Date => 날짜관련 기능 제공
+        //String => 문자열관련 기능 제공
+
+        //현재날짜 구하기
+        let current = new Date();
+        console.log(current);
+
+        //현재 년도 구하기
+        let year = current.getFullYear();
+        console.log(year);
+
+        //현재 월 구하기
+        let month = current.getMonth()+1; //0월 부터 시작함 1더하고 시작
+        console.log(month);
+
+        //현재 일 구하기
+        let date = current.getDate();
+        console.log(date);
+
+        //요일 구하기
+        let day = current.getDay();
+        console.log(day);
+
+        let days =["일","월","화","수","목","금","토"];
+        console.log(days[day]);
+    </script>
+</body>
+</html>

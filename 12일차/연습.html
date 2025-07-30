@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fruits=["사과","수박","딸기","참외"];
+        fruits.forEach(function(item,index){
+            console.log("과일: "+item+" 번호: "+index);
+        })
+        let fruitsBox = fruits.map(function(item){
+            item += "상자";
+            console.log(item);
+        })
+    </script>
+</body>
+</html>

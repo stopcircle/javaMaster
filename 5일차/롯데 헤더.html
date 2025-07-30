@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .header{
+            border: 1px solid black;
+            height: 200px;
+
+            display: flex;
+        }
+
+        .header > div{
+            width: 33.3%;
+            height: 200px;
+            border: 1px solid black;
+        }
+
+        .title_wrap{
+
+        }
+
+        .title_wrap img{
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+
+        /* 검색바 */
+        .search{
+            position: absolute;
+            bottom: 0;
+
+            display: flex;
+        }
+
+        .search_wrap{
+            position: relative;
+        }
+
+        input[type=text]{
+            width: 400px;
+            height: 40px;
+            border-radius: 10px 0px 0px 10px;
+            border: 0.1px solid #ccc;
+        }
+
+        button{
+            width: 50px;
+            height: 43px;
+            border-radius: 0 10px 10px 0;
+            border: 0.1px solid #ccc;
+            margin: 0;
+        }
+        
+        .menu{
+            border: 1px solid black;
+        }
+
+        .menu li{
+            /* border: 1px solid black; */
+            padding-right: 10px;
+        }
+
+        span{
+            display: block;
+        }
+
+        .menu li img{
+            margin-left: 10px;
+        }
+
+        /* menu css */
+        .menu_wrap{
+            position: relative;
+        }
+
+        .menu{
+            position: absolute;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <!-- title -->
+        <div class="title_wrap">
+            <img src="./img/logo.gif" alt="타이틀 이미지">
+        </div>
+
+        <!-- search -->
+        <div class="search_wrap">
+            <div class="search">
+                <input type="text">
+                <button>조회</button>
+            </div>
+        </div>
+
+        <!-- menu -->
+        <div class="menu_wrap">
+            <ul>
+                <li><img src="./img/1.png"></li>
+                <li><img src="./img/2.png"></li>
+                <li><img src="./img/.png"></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

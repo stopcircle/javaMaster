@@ -1,0 +1,854 @@
+* {
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* 웹페이지 전체 */
+.container {
+    width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* 헤더 */
+.header {
+    width: 1400px;
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0.9);
+    margin: 0 auto;
+
+    position: relative;
+    left: 0;
+}
+
+/* 헤더 로고 */
+.header_logo {
+    width: 140px;
+    height: 45px;
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/ci/logo-white_new2.png);
+    background-size: cover;
+    background-position: center;
+
+    position: absolute;
+    left: 627px;
+}
+
+/* 헤더 상단 사이드버튼 */
+.header_sidebtn .left_link {
+    position: absolute;
+    top: 15px;
+    left: 200px;
+}
+
+.header_sidebtn .left_link a {
+    margin-right: 20px;
+    font-size: 12px;
+    color: #888;
+}
+
+.header_sidebtn .right_link {
+    position: absolute;
+    top: 15px;
+    right: 200px;
+}
+
+.header_sidebtn .right_link a {
+    margin-right: 20px;
+    font-size: 12px;
+    color: #888;
+}
+
+/* 헤더 상단 사이드버튼2 */
+.header_sidebtn2 img {
+    vertical-align: middle;
+}
+
+.header_sidebtn2 .left_btn {
+    position: absolute;
+    top: 55px;
+    left: 200px;
+}
+
+.header_sidebtn2 .left_btn a {
+    margin-right: 20px;
+}
+
+.header_sidebtn2 .right_btn {
+    position: absolute;
+    top: 51px;
+    right: 200px;
+}
+
+.header_sidebtn2 .right_btn a {
+    margin-right: 20px;
+}
+
+/* 헤더 메뉴 */
+.header_menu {
+    width: 700px;
+    display: flex;
+
+    position: absolute;
+    bottom: 10px;
+    left: 370px;
+}
+
+.menu_bar {
+    position: relative;
+}
+
+.menu_bar>ul {
+    width: 50px;
+    margin: 90px auto 0 auto;
+}
+
+.menu_bar>li {
+    margin-right: 40px;
+    font-size: 17px;
+}
+
+.menu_bar>li>a {
+    color: #fff;
+}
+
+.menu_bar:hover .hidden-sub-menu {
+    display: block;
+}
+
+.hidden-sub-menu {
+    width: 200px;
+    font-size: 14px;
+    padding-top: 7px;
+    display: none;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.13);
+
+    position: absolute;
+    left: 0;
+}
+
+/* 영화 리스트 전체 */
+.cinema_list_wrap {
+    width: 1400px;
+    height: 680px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.87);
+}
+
+/* 영화 리스트 타이틀 */
+.title {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+}
+
+.title>span {
+    bottom: 10px;
+    border-bottom: 1px solid #ccc;
+
+    position: absolute;
+}
+
+.title>a {
+    right: 200px;
+    bottom: 10px;
+    color: #ccc;
+
+    position: absolute;
+}
+
+/* 영화 리스트 */
+.cinema_list {
+    width: 1000px;
+    margin-left: 200px;
+    display: flex;
+}
+
+.cinema_list li a>img {
+    width: 225px;
+    height: 332px;
+    border-radius: 5px;
+    margin-right: 32px;
+    display: block;
+}
+
+/* 이미지 영역 설정 */
+.cinema_img_wrap {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 5px;
+
+    position: relative;
+}
+
+/* 이미지 설정 */
+.cinema_img_wrap img {
+    width: 225px;
+    height: 332px;
+    display: block;
+
+    transition: all 0.3s ease-in-out;
+}
+
+/* 설명 오버레이 */
+.cinema_info {
+    width: 225px;
+    height: 332px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-size: 12px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.cinema_img_wrap:hover img {
+    filter: brightness(70%);
+}
+
+.cinema_img_wrap:hover .cinema_info {
+    opacity: 1;
+}
+
+.cinema_list_btn {
+    margin-top: 10px;
+}
+
+.cinema_list_btn .like {
+    width: 70px;
+    height: 36px;
+    line-height: 36px;
+    margin: 0;
+    padding: 0 5px;
+    color: #fff;
+    font-size: 0.8667em;
+    border-color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    border: 0;
+}
+
+.book {
+    width: 150px;
+    height: 36px;
+    margin: 0;
+    padding: 0;
+    border-radius: 4px;
+    color: #fff;
+    line-height: 36px;
+    border: 0;
+    background: #037b94;
+}
+
+/* 서비스바 */
+.service_wrap {
+    width: 1000px;
+    height: 80px;
+    margin-top: 20px;
+    margin-left: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.service_wrap>div {
+    width: 12%;
+}
+
+/* 검색창 */
+.search_wrap {
+    width: 100%;
+    display: flex;
+}
+
+.service_wrap .search {
+    position: relative;
+    display: inline-block;
+    width: 180px;
+    height: 30px;
+    padding: 0 30px 0 0;
+    border-style: none;
+    border-bottom: 1px solid white;
+}
+
+.search input {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background-color: transparent;
+    color: #fff;
+}
+
+.search button {
+    width: 30px;
+    height: 100%;
+    border: 0;
+    background-color: transparent;
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-search-white.png);
+    background-size: 16px 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.service_wrap div {
+    border-style: none;
+}
+
+.service_wrap a {
+    font-size: 14.5px;
+}
+
+.service_wrap div img {
+    margin-right: 7px;
+}
+
+/* 혜택 */
+.event {
+    height: 550px;
+    display: flex;
+
+    position: relative;
+}
+
+.event h2 {
+    height: 30px;
+    margin-left: 200px;
+    margin-top: 40px;
+    color: #351f66 !important;
+    ;
+}
+
+.event1 img {
+    width: 410px;
+    height: 170px;
+    border-radius: 5px;
+
+    position: absolute;
+    left: 200px;
+    bottom: 0;
+}
+
+.event2 img {
+    width: 165px;
+    height: 170px;
+    border-radius: 5px;
+
+    position: absolute;
+    left: 630px;
+    bottom: 0;
+}
+
+.event3 img {
+    width: 375px;
+    height: 490px;
+    border-radius: 5px;
+
+    position: absolute;
+    right: 200px;
+    bottom: 0;
+}
+
+.event4 img {
+    width: 300px;
+    height: 230px;
+    border-radius: 5px;
+
+    position: absolute;
+    left: 200px;
+    bottom: 210px;
+}
+
+.event5 img {
+    width: 380px;
+    height: 270px;
+    border: 5px;
+
+    position: absolute;
+    left: 445px;
+    bottom: 170px;
+}
+
+/* 하단 버튼(메뉴바) */
+.event_menubar {
+    width: 1400px;
+    height: 280px;
+    margin: 0 auto;
+    display: flex;
+    background: #5938c7;
+    margin-top: -90px;
+    align-items: center;
+
+}
+
+.event_menubar a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-size: 16px;
+    width: 15%;
+    cursor: pointer;
+    padding-top: 10px;
+    text-decoration: none;
+    transition: color 0.14s;
+    box-sizing: border-box;
+}
+
+.event_menubar img {
+    width: 40px;
+    height: 35px;
+    margin-bottom: 7px;
+}
+
+
+/* 큐레이션-메인 */
+.curation_wrap {
+    width: 1400px;
+    height: 800px;
+    margin: 0 auto;
+    margin-top: -30px;
+
+    position: relative;
+    background-color: #252451;
+    color: #fff;
+}
+
+.cur_main h2 {
+    padding: 30px 0 10px 200px;
+}
+
+.cur_main_img img {
+    width: 300px;
+    height: 420px;
+    border-radius: 15px;
+
+    margin-left: 215px;
+}
+
+.cur_main_btn {
+    margin-top: 15px;
+}
+
+.cur_main_btn button {
+    width: 140px;
+    height: 50px;
+
+    margin-left: 15px;
+    font-size: 17px;
+}
+
+.cur_main_info {
+    width: 650px;
+    height: 300px;
+
+    position: absolute;
+    right: 200px;
+    top: 100px;
+}
+
+.cur_main_info .main_info {
+    margin-bottom: 0px;
+}
+
+.cur_main_info .main_info h1 {
+    margin-top: 0px;
+}
+
+
+/* 큐레이션-서브 */
+.cur_sub ul {
+    width: 650px;
+    display: flex;
+    justify-content: space-between;
+
+    position: absolute;
+    bottom: 170px;
+    right: 200px;
+}
+
+.cur_sub ul li {
+    width: 150px;
+    height: 220px;
+}
+
+.cur_sub ul li a img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.cur_sub ul li a p {
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+
+/* 메가박스 안내 */
+.info_center_wrap {
+    width: 1000px;
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+
+    position: relative;
+}
+
+.info_center_wrap h2 {
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    color: #351f66 !important;
+    ;
+}
+
+
+.info_center_wrap a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    width: 15%;
+    cursor: pointer;
+    padding-top: 10px;
+    text-decoration: none;
+    transition: color 0.14s;
+    box-sizing: border-box;
+}
+
+.info_center_wrap img {
+    width: 40px;
+    height: 35px;
+    margin-bottom: 7px;
+}
+
+
+/* 풋터 */
+.footer {
+    width: 1000px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.footer a {
+    color: #666;
+}
+
+/* 풋터 상단 */
+.footer_top {
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.footer_top ul {
+    display: flex;
+    font-size: 12px;
+    float: left;
+}
+
+.footer_top li {
+    margin-right: 10px;
+}
+
+.footer_search_btn {
+    float: right;
+    width: 100px;
+    height: 30px;
+    line-height: 28px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 13px;
+    border: 1px solid #d8d9db;
+    ;
+    border-radius: 30px;
+}
+
+/* 풋터 하단 */
+.footer_bottom {
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 0;
+    display: flex;
+}
+
+.footer_bottom p {
+    font-size: 12px;
+    margin-right: 16px;
+}
+
+.footer_img {
+    width: 150px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.footer_bottom_sns ul {
+    float: right;
+    display: flex;
+}
+
+.footer_bottom_sns ul li {
+    margin-left: 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 로그인 페이지 */
+.login_wrap {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 200px;
+
+    position: relative;
+}
+
+/* 로그인 페이지 타이틀 */
+.login_wrap a {
+    color: black;
+}
+
+.login_header {
+    width: 100%;
+    height: 45px;
+    background: #503396;
+}
+
+.login_header h3 {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    font-size: 16px;
+    color: white;
+    padding-left: 20px;
+}
+
+.login_header>a {
+    float: right;
+    margin: 10px 10px 0 0;
+}
+
+/* 로그인 페이지 메인 */
+.login_main {
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 40px;
+}
+
+.login_main>input {
+    width: 80%;
+    height: 45px;
+    margin-top: 15px;
+    border: 1px solid #d8d9db;
+    outline: none;
+}
+
+.login_main>input:hover {
+    border: 1px solid #444;
+}
+
+.login_main>.id_checkbox {
+    float: left;
+}
+
+.login_main button {
+    width: 80%;
+    height: 40px;
+    color: white;
+    background-color: #503396;
+    border-radius: 5px;
+    border: none;
+}
+
+.login_main button:hover {
+    background-color: #351f67;
+    ;
+}
+
+/* 로그인 페이지 하단 */
+.login_bottom {
+    width: 60%;
+    height: 150px;
+
+    position: absolute;
+    bottom: 45px;
+    left: 90px;
+    font-size: 15px;
+}
+
+.login_bottom ul {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.login_bottom ul a {
+    color: #444;
+}
+
+.login_bottom_sns {
+    width: 150px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+
+
+
+
+
+
+/* 회원가입 페이지 */
+.signup_wrap {
+    width: 500px;
+    height: 1500px;
+    margin: 0 auto;
+    margin-top: 100px;
+
+    position: relative;
+}
+
+/* 회원가입 페이지 타이틀 */
+.signup_wrap a {
+    color: black;
+}
+
+.signup_header {
+    width: 100%;
+    height: 45px;
+    background: #503396;
+}
+
+.signup_header h3 {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    font-size: 16px;
+    color: white;
+    padding-left: 20px;
+}
+
+.signup_header>a {
+    float: right;
+    margin: 10px 10px 0 0;
+}
+
+/* 회원가입 페이지 메인 */
+.signup_main {
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 40px;
+}
+
+.signup_id {
+    width: 440px;
+    border-bottom: 1px solid #d8d9db;
+}
+
+.signup_id>input {
+    width: 85%;
+    height: 45px;
+    margin-top: 15px;
+    border: none;
+    outline: none;
+
+}
+
+.signup_main>input {
+    width: 88%;
+    height: 45px;
+    margin-top: 15px;
+    border: none;
+    border-bottom: 1px solid #d8d9db;
+    outline: none;
+}
+
+.signup_main>select {
+    width: 88%;
+    height: 45px;
+    margin-top: 15px;
+    border: none;
+    border-bottom: 1px solid #d8d9db;
+    outline: none;
+    color: #6b6b6b;
+}
+
+.input_btn {
+    font-size: 11px;
+    width: 60px;
+    color: #3d3d3d;
+    border: 1px solid #6b6b6b;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: 10px;
+}
+
+/* 회원가입 버튼 */
+.signup_btn {
+    width: 80%;
+    height: 40px;
+    color: white;
+    background-color: #503396;
+    border-radius: 5px;
+    border: none;
+    margin: 30px 0 0 15px
+}
+
+.signup_btn:hover {
+    background-color: #351f67;
+    ;
+}
