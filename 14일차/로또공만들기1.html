@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .b{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: blue;
+            text-align: center;
+            line-height: 60px;
+        }
+    </style>
+    <script>
+        function aa(){
+            const ball = document.createElement("div");
+            ball.innerHTML=41;
+            ball.classList.add("b");
+
+            const wrap = document.getElementById("wrap");
+            wrap.innerHTML = "";
+            wrap.appendChild(ball);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="aa()">로또공</button>
+    <div id="wrap"></div>
+</body>
+</html>

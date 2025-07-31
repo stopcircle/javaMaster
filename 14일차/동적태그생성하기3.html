@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .style1{
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+    </style>
+    
+    <script>
+        function addATag(){
+            const aTag = document.createElement("a");
+            aTag.href="http://www.naver.com";
+            aTag.target="_blank";
+            aTag.textContent = "네이버로 갑시다";
+            aTag.classList.add("style1")
+
+            const wrap = document.getElementById("wrap");
+            
+            wrap.appendChild(aTag);
+
+        }
+    </script>
+</head>
+<body>
+    <button onclick="addATag()">a 태그 생성</button>
+    <!-- 부모영역 -->
+    <div id="wrap"></div>
+</body>
+</html>

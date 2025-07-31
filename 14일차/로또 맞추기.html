@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .lottoball {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid black;
+            display: inline-block;
+            text-align: center;
+            line-height: 50px;
+            margin: 0 5px;
+        }
+
+        .input_wrap {
+            width: 420px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            margin: 0 auto;
+            margin-top: 400px;
+        }
+
+        #wrap {
+            text-align: center;
+            margin: 0 auto;
+            margin-top: -200px;
+        }
+
+        input {
+            width: 300px;
+            height: 45px;
+            line-height: 44px;
+            font-size: 20px;
+        }
+
+        button {
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+    <script>
+        //추첨 시작
+        function lottoStart() {
+            const inputNumber = document.getElementById("lottoInput").value;
+            const playerNum = inputNumber.split(" ").map(num => parseInt(num)); //사용자가 입력한 숫자
+            const computerNum = getLottoNumbers();  //컴퓨터가 저장한 숫자
+            let truenums = [];
+
+            if (!checknum(playerNum)) { //유효성검사
+                return;
+            }
+            
+            for (i = 0; i < playerNum.length; i++) {
+                if (computerNum.includes(playerNum[i])) {
+                    truenums.push(playerNum[i]);
+                }
+            }
+
+            createLotto(computerNum, truenums);
+        }
+
+        //로또 번호 생성
+        function getLottoNumbers() {
+            const lottoNumbers = [];
+
+            while (lottoNumbers.length < 6) {
+                const random = Math.floor(Math.random() * 45) + 1;
+                if (!lottoNumbers.includes(random)) {
+                    lottoNumbers.push(random);
+                }
+
+            }
+            return lottoNumbers;
+        }
+
+        //로또 색상 만들기
+        function getRandomColor() {
+            let r = Math.floor(Math.random() * 256); //0~255
+            let g = Math.floor(Math.random() * 256); //0~255
+            let b = Math.floor(Math.random() * 256); //0~255
+
+            let rgbColor = `rgb(${r},${g},${b})`;
+
+            return rgbColor;
+        }
+
+        //로또 공 생성
+        function createLotto(numbers, matchedNums = []) {
+            const wrap = document.getElementById("wrap");
+            const result = document.createElement("p");
+            result.innerHTML = `당첨된 번호의 수: ${matchedNums.length}개 <br>당첨된 번호:${matchedNums}`;
+
+            wrap.innerHTML = "";
+
+            numbers.sort((a, b) => a - b); //작은순으로 정렬
+
+            numbers.forEach(num => {
+                const ball = document.createElement("div");
+                ball.classList.add("lottoball");
+                ball.innerHTML = num;
+                ball.style.backgroundColor = getRandomColor();
+
+                wrap.appendChild(ball);
+            });
+
+            wrap.appendChild(result);
+        }
+
+        //유효성 검사
+        function checknum(numbers) {
+            if (numbers.length !== 6) {
+                alert("공백을 구분해서 6개 입력해주세요");
+                return false
+            }
+
+            for (let num of numbers) {
+                if (isNaN(num) || num < 1 || num > 45) {
+                    alert("1~45 이내의 숫자를 입력해주세요");
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="input_wrap">
+        <input type="text" id="lottoInput" placeholder="1~45까지 6자리(공백으로 구분)">
+        <button onclick="lottoStart()">추첨</button>
+    </div>
+    <div id="wrap"></div>
+    <div id="result-wrap"></div>
+</body>
+
+</html>

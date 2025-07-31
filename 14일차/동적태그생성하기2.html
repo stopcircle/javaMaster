@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .highlight{
+            background-color: yellow;
+            padding: 10px;
+            display: inline-block;
+            margin: 10px;
+        }
+    </style>
+
+    <script>
+        function addSpan(){
+            const spanTag = document.createElement("span");
+            spanTag.textContent="span 추가";
+            spanTag.classList.add("highlight");
+            
+            const wrap = document.getElementById("wrap");
+            
+            wrap.appendChild(spanTag);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="addSpan()">span태그 생성</button>
+    <!-- 부모영역 -->
+    <div id="wrap"></div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //로또 번호 숫자 가져오기
+        // function getLottoNumber1() {
+        //     const lottoNumbers = [12, 35, 6, 23, 45, 1];
+        //     return lottoNumbers;
+        // }
+
+        // const result = getLottoNumber1();
+        // alert(result);
+
+        function getLottoNumber2() {
+            const lottoNumbers = [];
+
+            for (i = 0; i < 6; i++) {
+                let random = Math.floor(Math.random() * 45) + 1;
+                lottoNumbers.push(random);
+            }return lottoNumbers
+        }
+        // const result2 = getLottoNumber2();
+        // document.write(result2);
+
+        //중복되지 않게 임의의 숫자로
+        function getLottoNumbers3(){
+            const lottoNumbers=[];
+
+            while(lottoNumbers.length<6){
+                const random = Math.floor(Math.random()*45)+1;
+                if(!lottoNumbers.includes(random)){
+                    lottoNumbers.push(random);
+                }
+                
+            }
+            return lottoNumbers;
+        }
+        const result3 = getLottoNumbers3();
+        document.write(result3);
+
+    </script>
+</body>
+
+</html>

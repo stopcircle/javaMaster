@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+        .product-list{
+            display: flex;
+        }
+        .product-list > li{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            text-align: center;
+        }
+        .product-list > li img{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+
+    <script>
+        function addproduct(){
+            const productlst = [
+                {
+                    img:"https://asset.m-gs.kr/prod/1090015479/1/370",
+                    title:"샌들",
+                    price:"16500"
+                },
+                {
+                    img:"https://asset.m-gs.kr/prod/1061230170/1/250",
+                    title:"가방",
+                    price:"31500"
+                }
+            ];
+
+            const productwrap = document.querySelector(".product-list");
+
+            productlst.forEach(function(item){
+                const li= document.createElement("li");
+                li.innerHTML=`<img src="${item.img}">
+                              <p>${item.title}</p>
+                              <p>${item.price}</p>`;
+
+                productwrap.appendChild(li);
+            }); 
+        }
+    </script>
+</head>
+<body>
+    <button onclick="addproduct()">더보기</button>
+
+    <ul class="product-list">
+        <!-- <li>
+            <img src="https://asset.m-gs.kr/prod/1090015479/1/370" alt="">
+            <p>샌들</p>
+            <p>16500</p>
+        </li>
+        <li>
+            <img src="https://asset.m-gs.kr/prod/1061230170/1/250" alt="">
+            <p>가방</p>
+            <p>30000</p>
+        </li> -->
+    </ul>
+</body>
+</html>
