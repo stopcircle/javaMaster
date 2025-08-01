@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calc() {
+            const qty = document.getElementById("qty");
+            const price = document.getElementById("price");
+            const amt = document.getElementById("amt");
+
+            let qtyValue = parseInt(qty.value);
+            let priceValue = parseInt(price.value);
+
+            // Check for invalid input
+            if (isNaN(qtyValue) || isNaN(priceValue)) {
+                alert("숫자를 입력하세요.");
+                amt.value = '';
+                return;
+            }
+
+            let amount = qtyValue * priceValue;
+            amt.value = amount; // Set the result input box
+        }
+    </script>
+</head>
+
+<body>
+    수량 <input type="text" id="qty">
+    * 단가 <input type="text" id="price">
+    = <input type="text" id="amt" readonly>
+    <button onclick="calc()">계산하기</button>
+</body>
+
+</html>

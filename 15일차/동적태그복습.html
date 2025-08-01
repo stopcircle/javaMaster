@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function additem(){
+            const item = document.getElementById("item").value;
+            const itemList = document.getElementById("item-lst");
+            const li = document.createElement("li");
+            li.innerHTML=`<span>${item}</span> <button onclick="a(this)">삭제</button>`
+
+            itemList.appendChild(li);
+        }
+
+        function a(obj){
+            const li = obj.closest("li");
+            li.remove();
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="item">
+    <button onclick="additem()">추가하기</button>
+    <ul id="item-lst">
+    </ul>
+</body>
+</html>
