@@ -6,6 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .title h1 {
+            background: linear-gradient(90deg,
+                    #ff0000 0%,
+                    /* 빨강 */
+                    #ff9900 16%,
+                    /* 주황 */
+                    #ffee00 32%,
+                    /* 노랑 */
+                    #34e834 48%,
+                    /* 초록 */
+                    #00aaff 64%,
+                    /* 파랑 */
+                    #7f00ff 80%,
+                    /* 남색 */
+                    #ff00c8 100%
+                    /* 보라 */
+                );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+    
+            color: transparent;
+            font-weight: bold;
+            letter-spacing: 2px;
+
+            display: inline-block;
+            font-size: 3rem;
+        }
 
         .img-wrap {
             width: 1000px;
@@ -101,6 +129,7 @@
             gallery_next.style.backgroundImage = "url(" + images[index + 1] + ")";
             gallery_next.style.backgroundPosition = "center";
             gallery_next.style.backgroundSize = "cover";
+
 
             if (index >= images.length - 1) {
                 index = -1;
